@@ -5,7 +5,7 @@ Configurações Globais para o GeneticPromptLab
 
 # --- Configuração do LLM ---
 # (Não usamos mais a API do Gemini, mas deixamos aqui para referência)
-# GEMINI_API_KEY = "AIzaSyC3xP7hg0Nb-VNoSP_LwC6gsBsxSNbl72Q"
+# GEMINI_API_KEY = "coloque sua api key"
 
 # (ATUALIZADO) Nome do modelo local do Ollama que você baixou
 LLM_MODEL_NAME = "gemma:2b"
