@@ -1,0 +1,7 @@
+deap
+pandas
+ollama
+numpy
+genetic-algorithm
+local-llm
+matplotlib
