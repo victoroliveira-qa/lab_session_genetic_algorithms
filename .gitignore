@@ -4,3 +4,4 @@ genetic_lab/genetic_algorithm/__pycache__/
 data/dados_desenrola_test.csv
 data/dados_desenrola_train.csv
 __pycache__
+*.png

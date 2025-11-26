@@ -1,17 +1,10 @@
-# genetic_lab/llm_local.py
-"""
-Interface para o LLM rodando 100% localmente via Ollama.
-"""
 import ollama
 from . import config # <--- MUDANÇA (Adicionado import relativo)
 
-# O nome do modelo que você baixou (ex: 'gemma:2b' ou 'llama3:8b')
+# O nome do modelo que você baixou
 MODEL_NAME = config.LLM_MODEL_NAME
 
 def query_local_llm(prompt_text):
-    """
-    Envia um prompt para o LLM local (Ollama) e retorna a resposta.
-    """
     try:
         response = ollama.chat(
             model=MODEL_NAME,

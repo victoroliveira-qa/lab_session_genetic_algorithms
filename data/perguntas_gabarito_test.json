@@ -1,42 +1,50 @@
 [
   {
-    "pergunta": "Qual o número total de operações?",
-    "query_pandas": "df['NUMERO_OPERACOES'].sum()"
+    "pergunta": "Quantos registros existem no total no dataframe?",
+    "query_pandas": "len(df)"
   },
   {
-    "pergunta": "Qual o volume total de operações?",
-    "query_pandas": "df['VOLUME_OPERACOES'].sum()"
+    "pergunta": "Qual a soma de operações para a UF da Bahia (BA)?",
+    "query_pandas": "df[df['UNIDADE_FEDERACAO'] == 'BA']['NUMERO_OPERACOES'].sum()"
   },
   {
-    "pergunta": "Qual o conglomerado financeiro com o maior número de operações?",
-    "query_pandas": "df.groupby('NOME_CONGLOMERADO_FINANCEIRO')['NUMERO_OPERACOES'].sum().idxmax()"
+    "pergunta": "Qual o volume total para a UF do Rio Grande do Sul (RS)?",
+    "query_pandas": "df[df['UNIDADE_FEDERACAO'] == 'RS']['VOLUME_OPERACOES'].sum()"
   },
   {
-    "pergunta": "Quantas operações existem para a UF de São Paulo (SP)?",
-    "query_pandas": "df[df['UNIDADE_FEDERACAO'] == 'SP']['NUMERO_OPERACOES'].sum()"
+    "pergunta": "Qual a média de volume de operações por Conglomerado?",
+    "query_pandas": "df.groupby('NOME_CONGLOMERADO_FINANCEIRO')['VOLUME_OPERACOES'].sum().mean()"
   },
   {
-    "pergunta": "Qual o volume médio de operações?",
-    "query_pandas": "df['VOLUME_OPERACOES'].mean()"
+    "pergunta": "Quais são as 3 UFs com maior volume de operações?",
+    "query_pandas": "df.groupby('UNIDADE_FEDERACAO')['VOLUME_OPERACOES'].sum().nlargest(3)"
   },
   {
-    "pergunta": "Quantos conglomerados financeiros únicos estão no dataset?",
-    "query_pandas": "df['NOME_CONGLOMERADO_FINANCEIRO'].nunique()"
+    "pergunta": "Qual o menor volume de operações registrado em um único registro?",
+    "query_pandas": "df['VOLUME_OPERACOES'].min()"
   },
   {
-    "pergunta": "Qual o volume total para o tipo 'Faixa 1'?",
-    "query_pandas": "df[df['TIPO_DESENROLA'] == 'Faixa 1']['VOLUME_OPERACOES'].sum()"
+    "pergunta": "Qual a média de operações para o tipo 'Faixa 1'?",
+    "query_pandas": "df[df['TIPO_DESENROLA'] == 'Faixa 1']['NUMERO_OPERACOES'].mean()"
   },
   {
-    "pergunta": "Qual UF teve o menor número de operações?",
-    "query_pandas": "df.groupby('UNIDADE_FEDERACAO')['NUMERO_OPERACOES'].sum().idxmin()"
+    "pergunta": "Quantos códigos de conglomerado únicos existem?",
+    "query_pandas": "df['COD_CONGLOMERADO_FINANCEIRO'].nunique()"
   },
   {
-    "pergunta": "Qual o conglomerado com o maior volume de operações?",
-    "query_pandas": "df.groupby('NOME_CONGLOMERADO_FINANCEIRO')['VOLUME_OPERACOES'].sum().idxmax()"
+    "pergunta": "Qual UF tem a menor soma de volume de operações?",
+    "query_pandas": "df.groupby('UNIDADE_FEDERACAO')['VOLUME_OPERACOES'].sum().idxmin()"
   },
   {
-    "pergunta": "Qual o número médio de operações por UF?",
-    "query_pandas": "df.groupby('UNIDADE_FEDERACAO')['NUMERO_OPERACOES'].sum().mean()"
+    "pergunta": "Qual o desvio padrão do número de operações?",
+    "query_pandas": "df['NUMERO_OPERACOES'].std()"
+  },
+  {
+    "pergunta": "Liste os 5 conglomerados com mais operações.",
+    "query_pandas": "df.groupby('NOME_CONGLOMERADO_FINANCEIRO')['NUMERO_OPERACOES'].sum().nlargest(5)"
+  },
+  {
+    "pergunta": "Qual a soma total da coluna COD_CONGLOMERADO_FINANCEIRO?",
+    "query_pandas": "df['COD_CONGLOMERADO_FINANCEIRO'].sum()"
   }
 ]

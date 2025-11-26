@@ -1,12 +1,7 @@
-# genetic_lab/dataset.py
-"""
-Gerenciador do Dataset.
-Carrega dados de TREINO para evoluir e dados de TESTE para validar.
-"""
 import pandas as pd
 import json
 import random
-from . import config  # <--- MUDANÇA (import relativo)
+from . import config
 
 
 class DatasetManager:
