@@ -3,6 +3,7 @@
 > Otimização Evolutiva de Prompts para Geração de Código Pandas usando LLMs Locais.
 
 Este projeto implementa um **Algoritmo Genético (AG)** para evoluir e otimizar automaticamente prompts de sistema (System Prompts). O objetivo é encontrar a melhor instrução possível para que um LLM local (via **Ollama**) traduza perguntas em linguagem natural para código **Python Pandas** correto.
+Base de Dados utilizada: https://dadosabertos.bcb.gov.br/dataset/desenrola-brasil
 
 ## 🏗️ Arquitetura do Projeto
 
