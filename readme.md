@@ -57,6 +57,7 @@ lab_session_genetic_algorithms/
 │   ├── config.py                  # Configurações (Modelo, Hyperparâmetros)
 │   ├── dataset.py                 # Gerenciador de dados
 │   ├── llm_local.py               # Interface com Ollama
+│   ├── run_baseline.py            # Baseline para Comparação Científica
 │   ├── utils.py                   # Normalização e cálculo de similaridade
 │   └── genetic_algorithm/         # Módulo do DEAP
 │       ├── toolbox.py             # Definição do DNA (Gene Pool)
